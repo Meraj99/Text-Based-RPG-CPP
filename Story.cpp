@@ -2,12 +2,13 @@
 #include<string>
 #include"CLS.h"
 #include"Player.h"
+#include"Enemy.h"
 #include"Story.h"
 #include"Battle.h"
 
 void story(Player &player)
 {
-
+	bool Retry;
 
 	std::cout << "Welcome to the game. This is a text-based RPG, made by Meraj Ahmed." << std::endl;
 	std::cout << "Press enter to continue..." << std::endl;
@@ -26,6 +27,15 @@ void story(Player &player)
 	std::cout << "Press enter to continue..." << std::endl;
 	getchar();
 	cls();
+	
+	savePlayer(player);
+	do
+	{
+		TutorialTroll tutorialTroll;
+		player = loadPlayer();
+		Retry = battle(player, tutorialTroll);
+	} while (Retry);
+	Retry = false;
 
 
 

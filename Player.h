@@ -4,15 +4,17 @@
 class Player
 {
 public:
-	double BaseHealth = 15;
+	double Health = 15;
 
 	double HelmetBoost = 0;
 	double ChestplateBoost = 0;
 	double LeggingsBoost = 0;
 	double FootwearBoost = 0;
 
-	double BaseDamage = 5;
+	double Damage = 5;
 	double DamageMultiplier = 1;
+
+	double HealBoost = 5;
 
 	double getArmorBoost();
 };

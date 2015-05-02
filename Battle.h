@@ -1,9 +1,9 @@
 #ifndef BATTLE_H
 #define BATTLE_H
 
-void Battle(Player &player);
-void Hit(Player &player);
-void Bash(Player &player);
-void Heal(Player &player);
+bool battle(Player &player, Enemy &enemy);
+void hit(Player &player, Enemy &enemy);
+void bash(Player &player, Enemy &enemy);
+void heal(Player &player, Enemy &enemy);
 
 #endif

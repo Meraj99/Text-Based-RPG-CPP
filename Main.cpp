@@ -2,7 +2,9 @@
 #include<fstream>
 #include<string>
 #include"Player.h"
+#include"Enemy.h"
 #include"Story.h"
+#include"Battle.h"
 #include"CLS.h"
 ;
 

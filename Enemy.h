@@ -1,11 +1,33 @@
 #ifndef ENEMY_H
 #define ENEMY_H
 
+
 class Enemy
 {
 public:
-	double BaseHealth = 5;
-	double BaseDamage = 2.5;
+	double Health;
+	double Damage;
 };
+
+class TutorialTroll : public Enemy
+{
+public:
+	TutorialTroll()
+	{
+		Enemy::Health = 10;
+		Enemy::Damage = 2.5;
+	}
+};
+
+class Troll : public Enemy
+{
+public:
+	Troll()
+	{
+		Enemy::Health = 15;
+		Enemy::Damage = 3;
+	}
+};
+
 
 #endif
