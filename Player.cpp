@@ -1,22 +1,14 @@
 #include<iostream>
 #include<fstream>
 #include"Player.h"
+#include"Story.h"
+#include"CLS.h"
 ;
+
 
 double Player::getArmorBoost()
 {
 	return HelmetBoost + ChestplateBoost + LeggingsBoost + FootwearBoost;
-}
-
-Player::Player() // Constructor for Player
-{
-	BaseHealth = 15;
-	HelmetBoost = 0;
-	ChestplateBoost = 0;
-	LeggingsBoost = 0;
-	FootwearBoost = 0;
-	BaseDamage = 5;
-	DamageMultiplier = 1;
 }
 
 void savePlayer(Player player) // Save the player
@@ -38,30 +30,22 @@ Player loadPlayer() // Load the player from SaveFile.txt. If file does not exist
 	std::ifstream in("SaveFile.txt");
 	if (in.is_open())
 	{
-		int data;
-		Player player = Player();
-		in >> data;
-		player.BaseHealth = data;
-		in >> data;
-		player.HelmetBoost;
-		in >> data;
-		player.ChestplateBoost;
-		in >> data;
-		player.LeggingsBoost;
-		in >> data;
-		player.FootwearBoost;
-		in >> data;
-		player.BaseDamage;
-		in >> data;
-		player.DamageMultiplier;
+		Player player;
+		in >> player.BaseHealth;
+		in >> player.HelmetBoost;
+		in >> player.ChestplateBoost;
+		in >> player.LeggingsBoost;
+		in >> player.FootwearBoost;
+		in >> player.BaseDamage;
+		in >> player.DamageMultiplier;
 		return player;
 	}
 	else
 	{
 		std::cout << "Unable to open file. Creating new game..." << std::endl;
-		system("pause");
-		system("cls");
+		getchar();
+		cls();
 	}
-	Player player = Player();
+	Player player;
 	return player;
 }
