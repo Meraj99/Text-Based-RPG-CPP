@@ -14,8 +14,8 @@ class TutorialTroll : public Enemy
 public:
 	TutorialTroll()
 	{
-		Enemy::Health = 10;
-		Enemy::Damage = 2.5;
+		Health = 10;
+		Damage = 2.5;
 	}
 };
 
@@ -24,8 +24,8 @@ class Troll : public Enemy
 public:
 	Troll()
 	{
-		Enemy::Health = 15;
-		Enemy::Damage = 3;
+		Health = 15;
+		Damage = 3;
 	}
 };
 
@@ -34,8 +34,8 @@ class Thug : public Enemy
 public:
 	Thug()
 	{
-		Enemy::Health = 20;
-		Enemy::Damage = 5;
+		Health = 20;
+		Damage = 5;
 	}
 };
 

@@ -44,7 +44,7 @@ void story(Player &player)
 	getchar();
 	cls();
 
-	player.DamageMultiplier = 1.2;
+	player.DamageMultiplier = 1.05;
 	savePlayer(player);
 	std::cout << "You have been rewarded with a wooden sword. Swords give you a passive damage multiplier towards your attacks." << std::endl;
 	getchar();
@@ -83,8 +83,9 @@ void story(Player &player)
 
 	if (GoToShop == "yes")
 	{
-
+		shopMenu(player);
 	}
+	savePlayer(player);
 
 
 

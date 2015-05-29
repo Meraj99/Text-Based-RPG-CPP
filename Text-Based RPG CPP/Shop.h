@@ -5,7 +5,10 @@
 
 
 void shopMenu(Player &player);
-template<typename T> void purchaseItem(Player &player, Item item);
-template<> void purchaseItem<Sword>(Player &player, Sword item);
+void purchaseSword(Player &player, Sword sword);
+void purchaseHelmet(Player &player, Helmet helmet);
+void purchaseChestplate(Player &player, Chestplate chestplate);
+void purchaseLeggings(Player &player, Leggings leggings);
+void purchaseFootwear(Player &player, Footwear footwear);
 
 #endif

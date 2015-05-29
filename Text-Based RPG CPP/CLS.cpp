@@ -17,7 +17,7 @@ void cls()
 
 	// Fill the entire screen with blanks.
 
-	if (!FillConsoleOutputCharacter(hConsole, (TCHAR) ' ',
+	if (!FillConsoleOutputCharacter(hConsole, static_cast<TCHAR>(' '),
 		dwConSize, coordScreen, &cCharsWritten))
 		return;
 
